@@ -11,6 +11,9 @@
 		801329502B338A8100538163 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013294F2B338A8100538163 /* ContentView.swift */; };
 		801329522B338A8400538163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801329512B338A8400538163 /* Assets.xcassets */; };
 		801329552B338A8400538163 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801329542B338A8400538163 /* Preview Assets.xcassets */; };
+		801329612B338CBE00538163 /* nunito-sans-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 801329602B338CBE00538163 /* nunito-sans-regular.ttf */; };
+		801329632B338CCD00538163 /* nunito-sans-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 801329622B338CCD00538163 /* nunito-sans-bold.ttf */; };
+		8013296B2B3390AB00538163 /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013296A2B3390AB00538163 /* EditButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		8013294F2B338A8100538163 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		801329512B338A8400538163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		801329542B338A8400538163 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		801329602B338CBE00538163 /* nunito-sans-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nunito-sans-regular.ttf"; sourceTree = "<group>"; };
+		801329622B338CCD00538163 /* nunito-sans-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nunito-sans-bold.ttf"; sourceTree = "<group>"; };
+		8013296A2B3390AB00538163 /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,10 @@
 		8013294C2B338A8100538163 /* Daily Diet */ = {
 			isa = PBXGroup;
 			children = (
+				8013295B2B338C4600538163 /* fonts */,
+				801329682B33907800538163 /* ViewModel */,
+				801329672B33904200538163 /* View */,
+				801329662B33903D00538163 /* Model */,
 				8013294D2B338A8100538163 /* Daily_DietApp.swift */,
 				8013294F2B338A8100538163 /* ContentView.swift */,
 				801329512B338A8400538163 /* Assets.xcassets */,
@@ -65,6 +75,45 @@
 				801329542B338A8400538163 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8013295B2B338C4600538163 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				801329622B338CCD00538163 /* nunito-sans-bold.ttf */,
+				801329602B338CBE00538163 /* nunito-sans-regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		801329662B33903D00538163 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		801329672B33904200538163 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				801329692B33908E00538163 /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		801329682B33907800538163 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		801329692B33908E00538163 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8013296A2B3390AB00538163 /* EditButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				801329552B338A8400538163 /* Preview Assets.xcassets in Resources */,
+				801329632B338CCD00538163 /* nunito-sans-bold.ttf in Resources */,
 				801329522B338A8400538163 /* Assets.xcassets in Resources */,
+				801329612B338CBE00538163 /* nunito-sans-regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				801329502B338A8100538163 /* ContentView.swift in Sources */,
+				8013296B2B3390AB00538163 /* EditButton.swift in Sources */,
 				8013294E2B338A8100538163 /* Daily_DietApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +327,7 @@
 				DEVELOPMENT_TEAM = SL8JP2UC8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Daily-Diet-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +357,7 @@
 				DEVELOPMENT_TEAM = SL8JP2UC8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Daily-Diet-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
