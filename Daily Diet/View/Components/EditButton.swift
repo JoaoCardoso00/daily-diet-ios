@@ -17,7 +17,7 @@ struct EditButton: View {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundStyle(Color(.gray2))
                     .frame(height: 65)
-                HStack {
+                HStack(spacing: 20) {
                     Image(systemName: "pencil.line").foregroundStyle(Color(.white)).font(.title2)
                     Text("\(buttonText)").foregroundStyle(Color(.white)).font(.title2).fontWeight(.bold)
                 }
