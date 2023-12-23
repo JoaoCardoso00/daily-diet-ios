@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State var text = ""
-    @State private var navigateToCreateMeal = false
 
     var body: some View {
         NavigationStack {
@@ -19,13 +18,17 @@ struct ContentView: View {
                     Spacer()
                     Image(.avatar).resizable().frame(width: 50, height: 50)
                 }.padding(.vertical, 15)
-                NavigationLink(destination: EmptyView()) {
-                    PercentagePanel(percentage: 90.86).padding(.bottom, 30)
+                NavigationLink(destination: Status()) {
+                    PercentagePanel(percentage: 90.86).padding(.bottom, 15)
                 }
                 Text("Refeições").frame(maxWidth: .infinity, alignment: .leading).font(.title3)
                 NavigationLink(destination: EmptyView()) {
                     DefaultButton(buttonText: "Nova refeição", iconSystemName: "plus", asLink: true) {}
                 }
+                ScrollView {
+                    Spacer().frame(height: 10) // Top padding
+                    MealList()
+                }.scrollIndicators(.hidden).padding(.vertical)
             }
             .padding()
             Spacer()

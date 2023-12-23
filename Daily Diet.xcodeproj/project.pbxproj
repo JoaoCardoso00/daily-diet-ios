@@ -22,6 +22,9 @@
 		805B924A2B37512800A588F2 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92492B37512800A588F2 /* Meal.swift */; };
 		805B924C2B37532800A588F2 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B924B2B37532800A588F2 /* Stats.swift */; };
 		805B924E2B37539100A588F2 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B924D2B37539100A588F2 /* Meals.swift */; };
+		805B92512B3781B300A588F2 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92502B3781B300A588F2 /* Status.swift */; };
+		805B92552B378B4D00A588F2 /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92542B378B4D00A588F2 /* MealItem.swift */; };
+		805B92572B378F3F00A588F2 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92562B378F3F00A588F2 /* MealList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		805B92492B37512800A588F2 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		805B924B2B37532800A588F2 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
 		805B924D2B37539100A588F2 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
+		805B92502B3781B300A588F2 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		805B92542B378B4D00A588F2 /* MealItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItem.swift; sourceTree = "<group>"; };
+		805B92562B378F3F00A588F2 /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 		801329672B33904200538163 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				805B924F2B3781A400A588F2 /* Pages */,
 				801329692B33908E00538163 /* Components */,
 			);
 			path = View;
@@ -136,6 +143,8 @@
 				805B923E2B361E6F00A588F2 /* Input.swift */,
 				805B92432B373E1500A588F2 /* PercentagePanel.swift */,
 				805B92472B37446800A588F2 /* DefaultButton.swift */,
+				805B92542B378B4D00A588F2 /* MealItem.swift */,
+				805B92562B378F3F00A588F2 /* MealList.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -146,6 +155,14 @@
 				805B92412B361F9900A588F2 /* StatefulPreviewWrapper.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		805B924F2B3781A400A588F2 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				805B92502B3781B300A588F2 /* Status.swift */,
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +239,7 @@
 			files = (
 				805B923F2B361E6F00A588F2 /* Input.swift in Sources */,
 				805B924C2B37532800A588F2 /* Stats.swift in Sources */,
+				805B92572B378F3F00A588F2 /* MealList.swift in Sources */,
 				805B923B2B3395CA00A588F2 /* DeleteButton.swift in Sources */,
 				801329502B338A8100538163 /* ContentView.swift in Sources */,
 				805B92482B37446800A588F2 /* DefaultButton.swift in Sources */,
@@ -229,8 +247,10 @@
 				8013294E2B338A8100538163 /* Daily_DietApp.swift in Sources */,
 				805B923D2B33978400A588F2 /* Select.swift in Sources */,
 				805B92442B373E1500A588F2 /* PercentagePanel.swift in Sources */,
+				805B92552B378B4D00A588F2 /* MealItem.swift in Sources */,
 				805B924E2B37539100A588F2 /* Meals.swift in Sources */,
 				805B92422B361F9900A588F2 /* StatefulPreviewWrapper.swift in Sources */,
+				805B92512B3781B300A588F2 /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
