@@ -20,7 +20,7 @@ struct Input: View {
             }
             ZStack {
                 RoundedRectangle(cornerRadius: 5)
-                    .foregroundColor(Color("Gray-500"))
+                    .foregroundColor(.clear)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
                             .stroke(isFocused ? .gray2 : .gray5, lineWidth: 1)
