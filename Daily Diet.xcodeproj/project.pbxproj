@@ -16,6 +16,8 @@
 		8013296B2B3390AB00538163 /* EditButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013296A2B3390AB00538163 /* EditButton.swift */; };
 		805B923B2B3395CA00A588F2 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B923A2B3395CA00A588F2 /* DeleteButton.swift */; };
 		805B923D2B33978400A588F2 /* Select.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B923C2B33978400A588F2 /* Select.swift */; };
+		805B923F2B361E6F00A588F2 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B923E2B361E6F00A588F2 /* Input.swift */; };
+		805B92422B361F9900A588F2 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92412B361F9900A588F2 /* StatefulPreviewWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		8013296A2B3390AB00538163 /* EditButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButton.swift; sourceTree = "<group>"; };
 		805B923A2B3395CA00A588F2 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		805B923C2B33978400A588F2 /* Select.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Select.swift; sourceTree = "<group>"; };
+		805B923E2B361E6F00A588F2 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
+		805B92412B361F9900A588F2 /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 		8013294C2B338A8100538163 /* Daily Diet */ = {
 			isa = PBXGroup;
 			children = (
+				805B92402B361F8700A588F2 /* Utils */,
 				8013295B2B338C4600538163 /* fonts */,
 				801329682B33907800538163 /* ViewModel */,
 				801329672B33904200538163 /* View */,
@@ -118,8 +123,17 @@
 				8013296A2B3390AB00538163 /* EditButton.swift */,
 				805B923A2B3395CA00A588F2 /* DeleteButton.swift */,
 				805B923C2B33978400A588F2 /* Select.swift */,
+				805B923E2B361E6F00A588F2 /* Input.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		805B92402B361F8700A588F2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				805B92412B361F9900A588F2 /* StatefulPreviewWrapper.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +208,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				805B923F2B361E6F00A588F2 /* Input.swift in Sources */,
 				805B923B2B3395CA00A588F2 /* DeleteButton.swift in Sources */,
 				801329502B338A8100538163 /* ContentView.swift in Sources */,
 				8013296B2B3390AB00538163 /* EditButton.swift in Sources */,
 				8013294E2B338A8100538163 /* Daily_DietApp.swift in Sources */,
 				805B923D2B33978400A588F2 /* Select.swift in Sources */,
+				805B92422B361F9900A588F2 /* StatefulPreviewWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
