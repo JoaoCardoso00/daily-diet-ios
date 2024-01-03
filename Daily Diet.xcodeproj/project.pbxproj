@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800D038C2B45C83F002F3611 /* DailyDiet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 800D038A2B45C83F002F3611 /* DailyDiet.xcdatamodeld */; };
+		800D038F2B45C8D8002F3611 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D038E2B45C8D8002F3611 /* Meal.swift */; };
+		800D03912B45C8EF002F3611 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D03902B45C8EE002F3611 /* Meals.swift */; };
+		800D03962B45CF6F002F3611 /* CDMeal_helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D03952B45CF6F002F3611 /* CDMeal_helper.swift */; };
+		800D03982B45DBF4002F3611 /* CDMeals_helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D03972B45DBF4002F3611 /* CDMeals_helper.swift */; };
+		800D039A2B45E1AE002F3611 /* PersistentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D03992B45E1AE002F3611 /* PersistentController.swift */; };
+		800D039C2B45E97C002F3611 /* FormatDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D039B2B45E97C002F3611 /* FormatDate.swift */; };
 		8013294E2B338A8100538163 /* Daily_DietApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013294D2B338A8100538163 /* Daily_DietApp.swift */; };
 		801329502B338A8100538163 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013294F2B338A8100538163 /* ContentView.swift */; };
 		801329522B338A8400538163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801329512B338A8400538163 /* Assets.xcassets */; };
@@ -19,15 +26,20 @@
 		805B92422B361F9900A588F2 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92412B361F9900A588F2 /* StatefulPreviewWrapper.swift */; };
 		805B92442B373E1500A588F2 /* PercentagePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92432B373E1500A588F2 /* PercentagePanel.swift */; };
 		805B92482B37446800A588F2 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92472B37446800A588F2 /* DefaultButton.swift */; };
-		805B924A2B37512800A588F2 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92492B37512800A588F2 /* Meal.swift */; };
 		805B924C2B37532800A588F2 /* Stats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B924B2B37532800A588F2 /* Stats.swift */; };
-		805B924E2B37539100A588F2 /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B924D2B37539100A588F2 /* Meals.swift */; };
 		805B92512B3781B300A588F2 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92502B3781B300A588F2 /* Status.swift */; };
 		805B92552B378B4D00A588F2 /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92542B378B4D00A588F2 /* MealItem.swift */; };
 		805B92572B378F3F00A588F2 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92562B378F3F00A588F2 /* MealList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		800D038B2B45C83F002F3611 /* DailyDiet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyDiet.xcdatamodel; sourceTree = "<group>"; };
+		800D038E2B45C8D8002F3611 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		800D03902B45C8EE002F3611 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
+		800D03952B45CF6F002F3611 /* CDMeal_helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDMeal_helper.swift; sourceTree = "<group>"; };
+		800D03972B45DBF4002F3611 /* CDMeals_helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDMeals_helper.swift; sourceTree = "<group>"; };
+		800D03992B45E1AE002F3611 /* PersistentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentController.swift; sourceTree = "<group>"; };
+		800D039B2B45E97C002F3611 /* FormatDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDate.swift; sourceTree = "<group>"; };
 		8013294A2B338A8100538163 /* Daily Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8013294D2B338A8100538163 /* Daily_DietApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_DietApp.swift; sourceTree = "<group>"; };
 		8013294F2B338A8100538163 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,9 +53,7 @@
 		805B92412B361F9900A588F2 /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
 		805B92432B373E1500A588F2 /* PercentagePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentagePanel.swift; sourceTree = "<group>"; };
 		805B92472B37446800A588F2 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
-		805B92492B37512800A588F2 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		805B924B2B37532800A588F2 /* Stats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stats.swift; sourceTree = "<group>"; };
-		805B924D2B37539100A588F2 /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
 		805B92502B3781B300A588F2 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		805B92542B378B4D00A588F2 /* MealItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItem.swift; sourceTree = "<group>"; };
 		805B92562B378F3F00A588F2 /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
@@ -60,6 +70,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		800D03942B45CF5B002F3611 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				800D03952B45CF6F002F3611 /* CDMeal_helper.swift */,
+				800D03972B45DBF4002F3611 /* CDMeals_helper.swift */,
+				800D03992B45E1AE002F3611 /* PersistentController.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		801329412B338A8100538163 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +99,7 @@
 		8013294C2B338A8100538163 /* Daily Diet */ = {
 			isa = PBXGroup;
 			children = (
+				800D03942B45CF5B002F3611 /* Core Data */,
 				805B92402B361F8700A588F2 /* Utils */,
 				8013295B2B338C4600538163 /* fonts */,
 				801329682B33907800538163 /* ViewModel */,
@@ -86,6 +107,7 @@
 				801329662B33903D00538163 /* Model */,
 				8013294D2B338A8100538163 /* Daily_DietApp.swift */,
 				8013294F2B338A8100538163 /* ContentView.swift */,
+				800D038A2B45C83F002F3611 /* DailyDiet.xcdatamodeld */,
 				801329512B338A8400538163 /* Assets.xcassets */,
 				801329532B338A8400538163 /* Preview Content */,
 			);
@@ -112,9 +134,9 @@
 		801329662B33903D00538163 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				805B92492B37512800A588F2 /* Meal.swift */,
 				805B924B2B37532800A588F2 /* Stats.swift */,
-				805B924D2B37539100A588F2 /* Meals.swift */,
+				800D038E2B45C8D8002F3611 /* Meal.swift */,
+				800D03902B45C8EE002F3611 /* Meals.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				805B92412B361F9900A588F2 /* StatefulPreviewWrapper.swift */,
+				800D039B2B45E97C002F3611 /* FormatDate.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -237,20 +260,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800D03962B45CF6F002F3611 /* CDMeal_helper.swift in Sources */,
+				800D03982B45DBF4002F3611 /* CDMeals_helper.swift in Sources */,
 				805B923F2B361E6F00A588F2 /* Input.swift in Sources */,
 				805B924C2B37532800A588F2 /* Stats.swift in Sources */,
+				800D038F2B45C8D8002F3611 /* Meal.swift in Sources */,
 				805B92572B378F3F00A588F2 /* MealList.swift in Sources */,
 				805B923B2B3395CA00A588F2 /* DeleteButton.swift in Sources */,
 				801329502B338A8100538163 /* ContentView.swift in Sources */,
 				805B92482B37446800A588F2 /* DefaultButton.swift in Sources */,
-				805B924A2B37512800A588F2 /* Meal.swift in Sources */,
+				800D039A2B45E1AE002F3611 /* PersistentController.swift in Sources */,
+				800D039C2B45E97C002F3611 /* FormatDate.swift in Sources */,
 				8013294E2B338A8100538163 /* Daily_DietApp.swift in Sources */,
 				805B923D2B33978400A588F2 /* Select.swift in Sources */,
+				800D03912B45C8EF002F3611 /* Meals.swift in Sources */,
 				805B92442B373E1500A588F2 /* PercentagePanel.swift in Sources */,
 				805B92552B378B4D00A588F2 /* MealItem.swift in Sources */,
-				805B924E2B37539100A588F2 /* Meals.swift in Sources */,
 				805B92422B361F9900A588F2 /* StatefulPreviewWrapper.swift in Sources */,
 				805B92512B3781B300A588F2 /* Status.swift in Sources */,
+				800D038C2B45C83F002F3611 /* DailyDiet.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +486,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		800D038A2B45C83F002F3611 /* DailyDiet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				800D038B2B45C83F002F3611 /* DailyDiet.xcdatamodel */,
+			);
+			currentVersion = 800D038B2B45C83F002F3611 /* DailyDiet.xcdatamodel */;
+			path = DailyDiet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 801329422B338A8100538163 /* Project object */;
 }

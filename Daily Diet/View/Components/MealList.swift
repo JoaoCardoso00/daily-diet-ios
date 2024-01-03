@@ -13,7 +13,7 @@ struct MealList: View {
             Text("12.08.22").frame(maxWidth: .infinity, alignment: .leading).font(.title2).fontWeight(.bold
             )
             ForEach(1 ... 4, id: \.self) { _ in
-                MealItem(time: "20:00", name: "x-burguer", isOnDiet: false)
+                MealItem(meal: CDMeal.example)
             }
         }
     }

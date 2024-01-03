@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23B92" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CDMeal" representedClassName="CDMeal" syncable="YES" codeGenerationType="class">
+        <attribute name="date_eaten_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="is_on_diet" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="item_description" optional="YES" attributeType="String"/>
+        <attribute name="name_" optional="YES" attributeType="String"/>
+        <attribute name="uuid_" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="CDMeals" representedClassName="CDMeals" syncable="YES" codeGenerationType="class">
+        <attribute name="date_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="uuid_" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="meals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMeal"/>
+    </entity>
+</model>

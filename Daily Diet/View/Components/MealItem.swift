@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct MealItem: View {
-    var time: String
-    var name: String
-    var isOnDiet: Bool
+    @ObservedObject var meal: CDMeal
+    var dateFormatter = DateFormatter()
+
+    var mealDate: String {
+        dateFormatter.string(from: meal.date)
+    }
 
     var body: some View {
         ZStack {
@@ -19,16 +22,17 @@ struct MealItem: View {
                     .stroke(.gray5, lineWidth: 2)
             )
             HStack {
-                Text(time).fontWeight(.bold)
+                Text("\(formatDate(meal.date))")
+                Text(mealDate).fontWeight(.bold)
                 Divider().frame(height: 25).overlay(.gray1).padding(.horizontal, 5)
-                Text(name).lineLimit(1)
+                Text(meal.name).lineLimit(1)
                 Spacer()
-                Circle().frame(width: 20, height: 20).foregroundStyle(isOnDiet ? .greenMid : .redMid)
+                Circle().frame(width: 20, height: 20).foregroundStyle(meal.isOnDiet ? .greenMid : .redMid)
             }.padding().padding(5)
         }
     }
 }
 
 #Preview {
-    MealItem(time: "20:00", name: "X-tudo", isOnDiet: false).padding()
+    MealItem(meal: CDMeal.example).padding()
 }
