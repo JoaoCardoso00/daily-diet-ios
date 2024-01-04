@@ -46,7 +46,7 @@ struct PersistenceController {
         let context = controller.container.viewContext
 
         let meal = CDMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date(), context: context)
-        let meals = CDMeals(date: Date(), meal: meal, context: context)
+        let meals = CDMeals(date: Date(), meals: [meal], context: context)
 
         return controller
     }()

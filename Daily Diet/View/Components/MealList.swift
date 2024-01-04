@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct MealList: View {
-    @FetchRequest(fetchRequest: CDMeals.fetch())
-    var mealGroups: FetchedResults<CDMeals>
+    var meals: [CDMeals]
 
     var body: some View {
-        ForEach(mealGroups, id: \.self) { mealGroup in
+        ForEach(meals, id: \.self) { mealGroup in
             VStack {
                 Text("hello").frame(maxWidth: .infinity, alignment: .leading).font(.title2).fontWeight(.bold
                 )
@@ -28,6 +27,6 @@ struct MealList: View {
 
 #Preview {
     ScrollView {
-        MealList().padding().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        MealList(meals: [CDMeals(date: Date(), meals: [CDMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date(), context: PersistenceController.preview.container.viewContext)], context: PersistenceController.preview.container.viewContext)]).padding()
     }
 }

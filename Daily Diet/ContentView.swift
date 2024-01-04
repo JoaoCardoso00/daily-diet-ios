@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) var context
+    @StateObject var viewModel: MealsViewModel
     @State var text = ""
 
     var body: some View {
@@ -25,12 +25,14 @@ struct ContentView: View {
                 Text("Refeições").frame(maxWidth: .infinity, alignment: .leading).font(.title3)
                 NavigationLink(destination: EmptyView()) {
                     DefaultButton(buttonText: "Nova refeição", iconSystemName: "plus") {
-                        let newMealGroup = CDMeals(date: Date(), meal: CDMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date(), context: context), context: context)
+                        viewModel.createMealGroup(date: Date(), meals: [
+                            viewModel.createMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date())
+                        ])
                     }
                 }
                 ScrollView {
                     Spacer().frame(height: 10) // Top padding
-                    MealList()
+                    MealList(meals: viewModel.meals)
                 }.scrollIndicators(.hidden).padding(.vertical)
             }
             .padding()
@@ -40,5 +42,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+    ContentView(viewModel: MealsViewModel(context: PersistenceController.preview.container.viewContext))
 }

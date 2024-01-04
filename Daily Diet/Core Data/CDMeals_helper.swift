@@ -25,10 +25,10 @@ extension CDMeals {
         self.meals = NSSet(array: [])
     }
 
-    convenience init(date: Date, meal: CDMeal, context: NSManagedObjectContext) {
+    convenience init(date: Date, meals: [CDMeal], context: NSManagedObjectContext) {
         self.init(context: context)
         self.date_ = date
-        self.meals = NSSet(object: meal)
+        self.meals = NSSet(array: meals)
     }
 
     override public func awakeFromInsert() {
@@ -48,7 +48,7 @@ extension CDMeals {
 
     static var example: CDMeals {
         let context = PersistenceController.preview.container.viewContext
-        let mealGroup = CDMeals(date: Date(), meal: CDMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date(), context: context), context: context)
+        let mealGroup = CDMeals(date: Date(), meals: [CDMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date(), context: context)], context: context)
 
         return mealGroup
     }

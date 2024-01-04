@@ -9,12 +9,11 @@ import SwiftUI
 
 @main
 struct Daily_DietApp: App {
-    let persistentController = PersistenceController.shared
+    let context = PersistenceController.shared.container.viewContext
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistentController.container.viewContext)
+            ContentView(viewModel: MealsViewModel(context: context))
         }
     }
 }
