@@ -40,10 +40,25 @@ extension CDMeal {
         self.uuid_ = UUID()
     }
 
+    static func delete(meal: CDMeal) {
+        guard let context = meal.managedObjectContext else { return }
+
+        context.delete(meal)
+    }
+
+    static func fetch(_ predicate: NSPredicate = .all) -> NSFetchRequest<CDMeal> {
+        let request = CDMeal.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \CDMeal.date_eaten_, ascending: true)]
+
+        request.predicate = predicate
+
+        return request
+    }
+
     // MARK: - Preview helpers
 
     static var example: CDMeal {
-        let context = PersistanceController.preview.container.viewContext
+        let context = PersistenceController.preview.container.viewContext
         let meal = CDMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date(), context: context)
 
         return meal

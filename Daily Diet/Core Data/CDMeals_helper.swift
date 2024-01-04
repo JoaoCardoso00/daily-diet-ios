@@ -22,9 +22,34 @@ extension CDMeals {
     convenience init(date: Date, context: NSManagedObjectContext) {
         self.init(context: context)
         self.date_ = date
+        self.meals = NSSet(array: [])
+    }
+
+    convenience init(date: Date, meal: CDMeal, context: NSManagedObjectContext) {
+        self.init(context: context)
+        self.date_ = date
+        self.meals = NSSet(object: meal)
     }
 
     override public func awakeFromInsert() {
         self.uuid_ = UUID()
+    }
+
+    static func fetch(_ predicate: NSPredicate = .all) -> NSFetchRequest<CDMeals> {
+        let request = CDMeals.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(keyPath: \CDMeals.date_, ascending: true)]
+
+        request.predicate = predicate
+
+        return request
+    }
+
+    // MARK: - Preview helpers
+
+    static var example: CDMeals {
+        let context = PersistenceController.preview.container.viewContext
+        let mealGroup = CDMeals(date: Date(), meal: CDMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date(), context: context), context: context)
+
+        return mealGroup
     }
 }

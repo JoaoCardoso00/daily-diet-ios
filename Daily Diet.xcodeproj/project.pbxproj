@@ -14,6 +14,7 @@
 		800D03982B45DBF4002F3611 /* CDMeals_helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D03972B45DBF4002F3611 /* CDMeals_helper.swift */; };
 		800D039A2B45E1AE002F3611 /* PersistentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D03992B45E1AE002F3611 /* PersistentController.swift */; };
 		800D039C2B45E97C002F3611 /* FormatDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D039B2B45E97C002F3611 /* FormatDate.swift */; };
+		800D039E2B46521F002F3611 /* NSPredicate_helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D039D2B46521F002F3611 /* NSPredicate_helper.swift */; };
 		8013294E2B338A8100538163 /* Daily_DietApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013294D2B338A8100538163 /* Daily_DietApp.swift */; };
 		801329502B338A8100538163 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013294F2B338A8100538163 /* ContentView.swift */; };
 		801329522B338A8400538163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801329512B338A8400538163 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		800D03972B45DBF4002F3611 /* CDMeals_helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDMeals_helper.swift; sourceTree = "<group>"; };
 		800D03992B45E1AE002F3611 /* PersistentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentController.swift; sourceTree = "<group>"; };
 		800D039B2B45E97C002F3611 /* FormatDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDate.swift; sourceTree = "<group>"; };
+		800D039D2B46521F002F3611 /* NSPredicate_helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPredicate_helper.swift; sourceTree = "<group>"; };
 		8013294A2B338A8100538163 /* Daily Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8013294D2B338A8100538163 /* Daily_DietApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_DietApp.swift; sourceTree = "<group>"; };
 		8013294F2B338A8100538163 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				800D03952B45CF6F002F3611 /* CDMeal_helper.swift */,
 				800D03972B45DBF4002F3611 /* CDMeals_helper.swift */,
 				800D03992B45E1AE002F3611 /* PersistentController.swift */,
+				800D039D2B46521F002F3611 /* NSPredicate_helper.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				800D03912B45C8EF002F3611 /* Meals.swift in Sources */,
 				805B92442B373E1500A588F2 /* PercentagePanel.swift in Sources */,
 				805B92552B378B4D00A588F2 /* MealItem.swift in Sources */,
+				800D039E2B46521F002F3611 /* NSPredicate_helper.swift in Sources */,
 				805B92422B361F9900A588F2 /* StatefulPreviewWrapper.swift in Sources */,
 				805B92512B3781B300A588F2 /* Status.swift in Sources */,
 				800D038C2B45C83F002F3611 /* DailyDiet.xcdatamodeld in Sources */,

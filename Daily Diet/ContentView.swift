@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var context
     @State var text = ""
 
     var body: some View {
@@ -23,7 +24,9 @@ struct ContentView: View {
                 }
                 Text("Refeições").frame(maxWidth: .infinity, alignment: .leading).font(.title3)
                 NavigationLink(destination: EmptyView()) {
-                    DefaultButton(buttonText: "Nova refeição", iconSystemName: "plus", asLink: true) {}
+                    DefaultButton(buttonText: "Nova refeição", iconSystemName: "plus") {
+                        let newMealGroup = CDMeals(date: Date(), meal: CDMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date(), context: context), context: context)
+                    }
                 }
                 ScrollView {
                     Spacer().frame(height: 10) // Top padding
@@ -37,5 +40,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
 }

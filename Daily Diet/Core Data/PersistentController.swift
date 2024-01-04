@@ -8,8 +8,8 @@
 import CoreData
 import Foundation
 
-struct PersistanceController {
-    static let shared = PersistanceController()
+struct PersistenceController {
+    static let shared = PersistenceController()
 
     let container: NSPersistentContainer
 
@@ -27,13 +27,26 @@ struct PersistanceController {
         }
     }
 
+    func save() {
+        let context = container.viewContext
+
+        guard context.hasChanges else { return }
+
+        do {
+            try context.save()
+        } catch {
+            print("error saving context: \(error)")
+        }
+    }
+
     // MARK: - SwiftUI preview helper
 
-    static var preview: PersistanceController = {
-        let controller = PersistanceController(inMemory: true)
+    static var preview: PersistenceController = {
+        let controller = PersistenceController(inMemory: true)
         let context = controller.container.viewContext
 
         let meal = CDMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date(), context: context)
+        let meals = CDMeals(date: Date(), meal: meal, context: context)
 
         return controller
     }()
