@@ -9,7 +9,8 @@ import CoreData
 import Foundation
 
 class MealsViewModel: ObservableObject {
-    @Published var meals: [CDMeals] = []
+    @Published var refreshID = UUID()
+    @Published var mealGroups: [CDMeals] = []
     
     private var context: NSManagedObjectContext
     
@@ -22,20 +23,42 @@ class MealsViewModel: ObservableObject {
         let request: NSFetchRequest = CDMeals.fetch()
         
         do {
-            meals = try context.fetch(request)
+            mealGroups = try context.fetch(request)
         } catch {
             print("Error fetching meals: \(error)")
         }
     }
     
-    func createMeal(name: String, isOnDiet: Bool, date_eaten: Date) -> CDMeal {
+    func createMeal(name: String, isOnDiet: Bool, date_eaten: Date) {
         let newMeal = CDMeal(name: name, isOnDiet: isOnDiet, date_eaten: date_eaten, context: context)
         
-        return newMeal
+        var updatedMealGroups = mealGroups
+        var isGroupUpdated = false
+        
+        for (index, mealGroup) in updatedMealGroups.enumerated() {
+            let normalizedMealGroupDate = Calendar.current.startOfDay(for: mealGroup.date)
+            let normalizedDateEaten = Calendar.current.startOfDay(for: date_eaten)
+            
+            if normalizedMealGroupDate == normalizedDateEaten {
+                var updatedMeals = NSMutableOrderedSet(orderedSet: mealGroup.meals!)
+                updatedMeals.insert(newMeal, at: 0) // Insert at the start
+                updatedMealGroups[index].meals = updatedMeals
+                isGroupUpdated = true
+                break
+            }
+        }
+        
+        if !isGroupUpdated {
+            updatedMealGroups.append(CDMeals(date: Date(), meals: [newMeal], context: context))
+        }
+        
+        mealGroups = updatedMealGroups
+        saveContext()
+        refreshID = UUID()
     }
 
     func createMealGroup(date: Date, meals: [CDMeal]) {
-        let newMealGroup = CDMeals(date: date, meals: meals, context: context)
+        let _ = CDMeals(date: date, meals: meals, context: context)
 
         saveContext()
     }

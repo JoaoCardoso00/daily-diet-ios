@@ -25,14 +25,12 @@ struct ContentView: View {
                 Text("Refeições").frame(maxWidth: .infinity, alignment: .leading).font(.title3)
                 NavigationLink(destination: EmptyView()) {
                     DefaultButton(buttonText: "Nova refeição", iconSystemName: "plus") {
-                        viewModel.createMealGroup(date: Date(), meals: [
-                            viewModel.createMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date())
-                        ])
+                        viewModel.createMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date())
                     }
                 }
                 ScrollView {
                     Spacer().frame(height: 10) // Top padding
-                    MealList(meals: viewModel.meals)
+                    MealList(meals: viewModel.mealGroups.reversed()).id(viewModel.refreshID)
                 }.scrollIndicators(.hidden).padding(.vertical)
             }
             .padding()

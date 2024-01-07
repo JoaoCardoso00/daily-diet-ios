@@ -22,13 +22,13 @@ extension CDMeals {
     convenience init(date: Date, context: NSManagedObjectContext) {
         self.init(context: context)
         self.date_ = date
-        self.meals = NSSet(array: [])
+        self.meals = NSOrderedSet(array: [])
     }
 
     convenience init(date: Date, meals: [CDMeal], context: NSManagedObjectContext) {
         self.init(context: context)
         self.date_ = date
-        self.meals = NSSet(array: meals)
+        self.meals = NSOrderedSet(array: meals)
     }
 
     override public func awakeFromInsert() {

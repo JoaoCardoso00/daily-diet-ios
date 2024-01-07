@@ -10,12 +10,18 @@ import SwiftUI
 struct MealList: View {
     var meals: [CDMeals]
 
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yy"
+        return formatter
+    }
+
     var body: some View {
-        ForEach(meals, id: \.self) { mealGroup in
+        ForEach(meals.reversed(), id: \.self) { mealGroup in
             VStack {
-                Text("hello").frame(maxWidth: .infinity, alignment: .leading).font(.title2).fontWeight(.bold
+                Text(mealGroup.date, formatter: dateFormatter).frame(maxWidth: .infinity, alignment: .leading).font(.title2).fontWeight(.bold
                 )
-                if let meals = mealGroup.meals?.allObjects as? [CDMeal] {
+                if let meals = mealGroup.meals?.array as? [CDMeal] {
                     ForEach(meals, id: \.self) { meal in
                         MealItem(meal: meal)
                     }

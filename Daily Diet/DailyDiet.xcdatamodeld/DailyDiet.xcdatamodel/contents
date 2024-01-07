@@ -10,6 +10,6 @@
     <entity name="CDMeals" representedClassName="CDMeals" syncable="YES" codeGenerationType="class">
         <attribute name="date_" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="uuid_" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <relationship name="meals" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMeal"/>
+        <relationship name="meals" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="CDMeal"/>
     </entity>
 </model>
