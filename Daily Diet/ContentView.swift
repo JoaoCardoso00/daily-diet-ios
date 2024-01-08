@@ -23,10 +23,8 @@ struct ContentView: View {
                     PercentagePanel(percentage: 90.86).padding(.bottom, 15)
                 }
                 Text("Refeições").frame(maxWidth: .infinity, alignment: .leading).font(.title3)
-                NavigationLink(destination: EmptyView()) {
-                    DefaultButton(buttonText: "Nova refeição", iconSystemName: "plus") {
-                        viewModel.createMeal(name: "Hamburguer", isOnDiet: false, date_eaten: Date())
-                    }
+                NavigationLink(destination: AddMeal()) {
+                    DefaultButton(buttonText: "Nova refeição", iconSystemName: "plus", asLink: true) {}
                 }
                 ScrollView {
                     Spacer().frame(height: 10) // Top padding

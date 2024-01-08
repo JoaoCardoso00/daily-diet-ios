@@ -55,7 +55,7 @@ struct Select: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundStyle(active ? colorForType(.light) : Color(.gray6))
-                    .frame(height: 65)
+                    .frame(height: 50)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(colorForType(.dark), lineWidth: active ? 2 : 0)
@@ -66,7 +66,6 @@ struct Select: View {
                         .font(.system(size: 10))
                     Text(buttonText)
                         .foregroundStyle(Color(.gray2))
-                        .font(.title2)
                         .fontWeight(.bold)
                 }
             }

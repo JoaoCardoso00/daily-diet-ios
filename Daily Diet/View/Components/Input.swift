@@ -10,6 +10,10 @@ import SwiftUI
 struct Input: View {
     @Binding var text: String
     var label: String?
+    var height: CGFloat?
+    var maskFormatter: Formatter?
+
+    let defaultFormatter = DateFormatter()
 
     @FocusState private var isFocused: Bool
 
@@ -25,12 +29,20 @@ struct Input: View {
                         RoundedRectangle(cornerRadius: 5)
                             .stroke(isFocused ? .gray2 : .gray5, lineWidth: 1)
                     )
-                TextField("", text: $text, prompt: Text(""))
-                    .focused($isFocused)
-                    .foregroundStyle(Color(.gray2))
-                    .padding()
-                    .autocorrectionDisabled()
-            }.frame(height: 50)
+                if height != nil {
+                    TextEditor(text: $text)
+                        .focused($isFocused)
+                        .foregroundStyle(Color(.gray2))
+                        .padding()
+                        .frame(height: height ?? 50).autocorrectionDisabled()
+                } else {
+                    TextField("", value: $text, formatter: maskFormatter ?? defaultFormatter)
+                        .focused($isFocused)
+                        .foregroundStyle(Color(.gray2))
+                        .padding()
+                        .autocorrectionDisabled()
+                }
+            }.frame(height: height ?? 50)
         }
     }
 }

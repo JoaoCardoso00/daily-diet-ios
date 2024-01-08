@@ -40,7 +40,7 @@ class MealsViewModel: ObservableObject {
             let normalizedDateEaten = Calendar.current.startOfDay(for: date_eaten)
             
             if normalizedMealGroupDate == normalizedDateEaten {
-                var updatedMeals = NSMutableOrderedSet(orderedSet: mealGroup.meals!)
+                let updatedMeals = NSMutableOrderedSet(orderedSet: mealGroup.meals!)
                 updatedMeals.insert(newMeal, at: 0) // Insert at the start
                 updatedMealGroups[index].meals = updatedMeals
                 isGroupUpdated = true
@@ -49,7 +49,7 @@ class MealsViewModel: ObservableObject {
         }
         
         if !isGroupUpdated {
-            updatedMealGroups.append(CDMeals(date: Date(), meals: [newMeal], context: context))
+            updatedMealGroups.insert(CDMeals(date: Date(), meals: [newMeal], context: context), at: 0)
         }
         
         mealGroups = updatedMealGroups

@@ -16,6 +16,8 @@
 		800D039C2B45E97C002F3611 /* FormatDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D039B2B45E97C002F3611 /* FormatDate.swift */; };
 		800D039E2B46521F002F3611 /* NSPredicate_helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D039D2B46521F002F3611 /* NSPredicate_helper.swift */; };
 		800D03A02B466623002F3611 /* MealsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D039F2B466623002F3611 /* MealsViewModel.swift */; };
+		800D03A22B4B96D6002F3611 /* AddMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D03A12B4B96D6002F3611 /* AddMeal.swift */; };
+		800D03A42B4B9E47002F3611 /* InputDateMaskFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D03A32B4B9E47002F3611 /* InputDateMaskFormatter.swift */; };
 		8013294E2B338A8100538163 /* Daily_DietApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013294D2B338A8100538163 /* Daily_DietApp.swift */; };
 		801329502B338A8100538163 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8013294F2B338A8100538163 /* ContentView.swift */; };
 		801329522B338A8400538163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 801329512B338A8400538163 /* Assets.xcassets */; };
@@ -44,6 +46,8 @@
 		800D039B2B45E97C002F3611 /* FormatDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDate.swift; sourceTree = "<group>"; };
 		800D039D2B46521F002F3611 /* NSPredicate_helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPredicate_helper.swift; sourceTree = "<group>"; };
 		800D039F2B466623002F3611 /* MealsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewModel.swift; sourceTree = "<group>"; };
+		800D03A12B4B96D6002F3611 /* AddMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeal.swift; sourceTree = "<group>"; };
+		800D03A32B4B9E47002F3611 /* InputDateMaskFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputDateMaskFormatter.swift; sourceTree = "<group>"; };
 		8013294A2B338A8100538163 /* Daily Diet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Diet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8013294D2B338A8100538163 /* Daily_DietApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily_DietApp.swift; sourceTree = "<group>"; };
 		8013294F2B338A8100538163 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 			children = (
 				805B92412B361F9900A588F2 /* StatefulPreviewWrapper.swift */,
 				800D039B2B45E97C002F3611 /* FormatDate.swift */,
+				800D03A32B4B9E47002F3611 /* InputDateMaskFormatter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				805B92502B3781B300A588F2 /* Status.swift */,
+				800D03A12B4B96D6002F3611 /* AddMeal.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -274,12 +280,14 @@
 				805B92572B378F3F00A588F2 /* MealList.swift in Sources */,
 				805B923B2B3395CA00A588F2 /* DeleteButton.swift in Sources */,
 				801329502B338A8100538163 /* ContentView.swift in Sources */,
+				800D03A22B4B96D6002F3611 /* AddMeal.swift in Sources */,
 				805B92482B37446800A588F2 /* DefaultButton.swift in Sources */,
 				800D039A2B45E1AE002F3611 /* PersistentController.swift in Sources */,
 				800D039C2B45E97C002F3611 /* FormatDate.swift in Sources */,
 				8013294E2B338A8100538163 /* Daily_DietApp.swift in Sources */,
 				805B923D2B33978400A588F2 /* Select.swift in Sources */,
 				800D03912B45C8EF002F3611 /* Meals.swift in Sources */,
+				800D03A42B4B9E47002F3611 /* InputDateMaskFormatter.swift in Sources */,
 				805B92442B373E1500A588F2 /* PercentagePanel.swift in Sources */,
 				805B92552B378B4D00A588F2 /* MealItem.swift in Sources */,
 				800D039E2B46521F002F3611 /* NSPredicate_helper.swift in Sources */,
