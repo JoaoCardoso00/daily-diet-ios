@@ -35,6 +35,7 @@
 		805B92552B378B4D00A588F2 /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92542B378B4D00A588F2 /* MealItem.swift */; };
 		805B92572B378F3F00A588F2 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92562B378F3F00A588F2 /* MealList.swift */; };
 		80CDF5BF2B524B9A006CDAC7 /* StyledDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDF5BE2B524B9A006CDAC7 /* StyledDatePicker.swift */; };
+		80CDF5C12B5334CE006CDAC7 /* DismissKeyboardOnTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDF5C02B5334CE006CDAC7 /* DismissKeyboardOnTap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		805B92542B378B4D00A588F2 /* MealItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItem.swift; sourceTree = "<group>"; };
 		805B92562B378F3F00A588F2 /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 		80CDF5BE2B524B9A006CDAC7 /* StyledDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledDatePicker.swift; sourceTree = "<group>"; };
+		80CDF5C02B5334CE006CDAC7 /* DismissKeyboardOnTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardOnTap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				805B92412B361F9900A588F2 /* StatefulPreviewWrapper.swift */,
 				800D039B2B45E97C002F3611 /* FormatDate.swift */,
 				800D03A32B4B9E47002F3611 /* InputDateMaskFormatter.swift */,
+				80CDF5C02B5334CE006CDAC7 /* DismissKeyboardOnTap.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				805B92422B361F9900A588F2 /* StatefulPreviewWrapper.swift in Sources */,
 				805B92512B3781B300A588F2 /* Status.swift in Sources */,
 				800D038C2B45C83F002F3611 /* DailyDiet.xcdatamodeld in Sources */,
+				80CDF5C12B5334CE006CDAC7 /* DismissKeyboardOnTap.swift in Sources */,
 				800D03A02B466623002F3611 /* MealsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

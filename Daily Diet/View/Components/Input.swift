@@ -29,9 +29,19 @@ struct Input: View {
                 if height != nil {
                     TextEditor(text: $text)
                         .focused($isFocused)
-                        .foregroundStyle(Color(.gray2))
+                        .foregroundColor(Color(.gray2))
+                        .background(Color.white)
                         .padding()
                         .frame(height: height ?? 50).autocorrectionDisabled()
+                        .toolbar {
+                            ToolbarItem(placement: .confirmationAction) {
+                                VStack(alignment: .trailing) {
+                                    Button("Confirmar") {
+                                        isFocused = false
+                                    }.disabled(!isFocused)
+                                }
+                            }
+                        }
                 } else {
                     TextField("", text: $text)
                         .focused($isFocused)
