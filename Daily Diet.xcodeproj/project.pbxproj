@@ -34,6 +34,7 @@
 		805B92512B3781B300A588F2 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92502B3781B300A588F2 /* Status.swift */; };
 		805B92552B378B4D00A588F2 /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92542B378B4D00A588F2 /* MealItem.swift */; };
 		805B92572B378F3F00A588F2 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92562B378F3F00A588F2 /* MealList.swift */; };
+		80CDF5BF2B524B9A006CDAC7 /* StyledDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDF5BE2B524B9A006CDAC7 /* StyledDatePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		805B92502B3781B300A588F2 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		805B92542B378B4D00A588F2 /* MealItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItem.swift; sourceTree = "<group>"; };
 		805B92562B378F3F00A588F2 /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
+		80CDF5BE2B524B9A006CDAC7 /* StyledDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledDatePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				805B92472B37446800A588F2 /* DefaultButton.swift */,
 				805B92542B378B4D00A588F2 /* MealItem.swift */,
 				805B92562B378F3F00A588F2 /* MealList.swift */,
+				80CDF5BE2B524B9A006CDAC7 /* StyledDatePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				801329502B338A8100538163 /* ContentView.swift in Sources */,
 				800D03A22B4B96D6002F3611 /* AddMeal.swift in Sources */,
 				805B92482B37446800A588F2 /* DefaultButton.swift in Sources */,
+				80CDF5BF2B524B9A006CDAC7 /* StyledDatePicker.swift in Sources */,
 				800D039A2B45E1AE002F3611 /* PersistentController.swift in Sources */,
 				800D039C2B45E97C002F3611 /* FormatDate.swift in Sources */,
 				8013294E2B338A8100538163 /* Daily_DietApp.swift in Sources */,

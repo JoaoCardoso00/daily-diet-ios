@@ -10,9 +10,13 @@ import SwiftUI
 struct AddMeal: View {
     @State private var Name: String = ""
     @State private var Description: String = ""
-    @State private var Date: String = ""
-    @State private var Hour: String = ""
+    @State private var Date: Date = .init()
+    @State private var Hour: Date = .init()
     @State private var isOnDiet: Bool? = nil
+
+    private var DateToString: String {
+        Date.formatted()
+    }
 
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -31,8 +35,14 @@ struct AddMeal: View {
                             Input(text: $Description, label: "Descrição", height: 125.0)
                         }.gridCellColumns(2).padding(.bottom)
                         GridRow {
-                            Input(text: $Date, label: "Data")
-                            Input(text: $Hour, label: "Hora")
+                            VStack(alignment: .leading) {
+                                Text("Data")
+                                StyledDatePicker(Date: $Date, type: .date)
+                            }
+                            VStack(alignment: .leading) {
+                                Text("Hora")
+                                StyledDatePicker(Date: $Hour, type: .hour)
+                            }
                         }.padding(.bottom)
                         GridRow {
                             VStack {

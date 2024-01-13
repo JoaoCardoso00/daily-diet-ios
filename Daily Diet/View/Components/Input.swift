@@ -11,9 +11,6 @@ struct Input: View {
     @Binding var text: String
     var label: String?
     var height: CGFloat?
-    var maskFormatter: Formatter?
-
-    let defaultFormatter = DateFormatter()
 
     @FocusState private var isFocused: Bool
 
@@ -36,7 +33,7 @@ struct Input: View {
                         .padding()
                         .frame(height: height ?? 50).autocorrectionDisabled()
                 } else {
-                    TextField("", value: $text, formatter: maskFormatter ?? defaultFormatter)
+                    TextField("", text: $text)
                         .focused($isFocused)
                         .foregroundStyle(Color(.gray2))
                         .padding()
