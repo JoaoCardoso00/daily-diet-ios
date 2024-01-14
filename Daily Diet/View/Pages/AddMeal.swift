@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct AddMeal: View {
-    @Environment(\.dismiss) var dismiss
     @StateObject var viewModel: MealsViewModel
+
     @State private var Name: String = ""
     @State private var Description: String = ""
     @State private var Date: Date = .init()
     @State private var Hour: Date = .init()
     @State private var isOnDiet: Bool? = nil
+    @State private var showSuccessScreen = false
+    @State private var showFailureScreen = false
 
     private var DateToString: String {
         Date.formatted()
@@ -26,7 +28,12 @@ struct AddMeal: View {
 
     func createMeal() {
         viewModel.createMeal(name: Name, isOnDiet: isOnDiet ?? false, date_eaten: combineDateAndTime(date: Date, time: Hour))
-        dismiss()
+
+        if isOnDiet! {
+            showSuccessScreen = true
+        } else {
+            showFailureScreen = true
+        }
     }
 
     var body: some View {
@@ -87,6 +94,12 @@ struct AddMeal: View {
             }
             .navigationTitle("Nova Refeição")
         }.ignoresSafeArea(.keyboard)
+            .fullScreenCover(isPresented: $showSuccessScreen) {
+                Success()
+            }
+            .fullScreenCover(isPresented: $showFailureScreen) {
+                Fail()
+            }
     }
 }
 

@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct Daily_DietApp: App {
     let context = PersistenceController.shared.container.viewContext
+    @StateObject private var router = NavigationRouter()
 
     var body: some Scene {
         WindowGroup {
             ContentView(viewModel: MealsViewModel(context: context))
+                .environmentObject(router)
         }
     }
 }

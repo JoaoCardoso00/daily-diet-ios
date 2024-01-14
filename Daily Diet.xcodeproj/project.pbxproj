@@ -36,6 +36,9 @@
 		805B92572B378F3F00A588F2 /* MealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B92562B378F3F00A588F2 /* MealList.swift */; };
 		80CDF5BF2B524B9A006CDAC7 /* StyledDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDF5BE2B524B9A006CDAC7 /* StyledDatePicker.swift */; };
 		80CDF5C12B5334CE006CDAC7 /* DismissKeyboardOnTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDF5C02B5334CE006CDAC7 /* DismissKeyboardOnTap.swift */; };
+		80CDF5C32B54805B006CDAC7 /* Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDF5C22B54805B006CDAC7 /* Success.swift */; };
+		80CDF5C52B548671006CDAC7 /* Fail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDF5C42B548671006CDAC7 /* Fail.swift */; };
+		80CDF5C92B5495C0006CDAC7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CDF5C82B5495C0006CDAC7 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		805B92562B378F3F00A588F2 /* MealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealList.swift; sourceTree = "<group>"; };
 		80CDF5BE2B524B9A006CDAC7 /* StyledDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledDatePicker.swift; sourceTree = "<group>"; };
 		80CDF5C02B5334CE006CDAC7 /* DismissKeyboardOnTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardOnTap.swift; sourceTree = "<group>"; };
+		80CDF5C22B54805B006CDAC7 /* Success.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Success.swift; sourceTree = "<group>"; };
+		80CDF5C42B548671006CDAC7 /* Fail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fail.swift; sourceTree = "<group>"; };
+		80CDF5C82B5495C0006CDAC7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,7 @@
 				800D039B2B45E97C002F3611 /* FormatDate.swift */,
 				800D03A32B4B9E47002F3611 /* InputDateMaskFormatter.swift */,
 				80CDF5C02B5334CE006CDAC7 /* DismissKeyboardOnTap.swift */,
+				80CDF5C82B5495C0006CDAC7 /* Router.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -202,6 +209,8 @@
 			children = (
 				805B92502B3781B300A588F2 /* Status.swift */,
 				800D03A12B4B96D6002F3611 /* AddMeal.swift */,
+				80CDF5C22B54805B006CDAC7 /* Success.swift */,
+				80CDF5C42B548671006CDAC7 /* Fail.swift */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -293,13 +302,16 @@
 				800D039C2B45E97C002F3611 /* FormatDate.swift in Sources */,
 				8013294E2B338A8100538163 /* Daily_DietApp.swift in Sources */,
 				805B923D2B33978400A588F2 /* Select.swift in Sources */,
+				80CDF5C32B54805B006CDAC7 /* Success.swift in Sources */,
 				800D03912B45C8EF002F3611 /* Meals.swift in Sources */,
 				800D03A42B4B9E47002F3611 /* InputDateMaskFormatter.swift in Sources */,
 				805B92442B373E1500A588F2 /* PercentagePanel.swift in Sources */,
 				805B92552B378B4D00A588F2 /* MealItem.swift in Sources */,
 				800D039E2B46521F002F3611 /* NSPredicate_helper.swift in Sources */,
 				805B92422B361F9900A588F2 /* StatefulPreviewWrapper.swift in Sources */,
+				80CDF5C52B548671006CDAC7 /* Fail.swift in Sources */,
 				805B92512B3781B300A588F2 /* Status.swift in Sources */,
+				80CDF5C92B5495C0006CDAC7 /* Router.swift in Sources */,
 				800D038C2B45C83F002F3611 /* DailyDiet.xcdatamodeld in Sources */,
 				80CDF5C12B5334CE006CDAC7 /* DismissKeyboardOnTap.swift in Sources */,
 				800D03A02B466623002F3611 /* MealsViewModel.swift in Sources */,

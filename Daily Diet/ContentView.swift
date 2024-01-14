@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var router: NavigationRouter
     @StateObject var viewModel: MealsViewModel
     @State var text = ""
 
     var body: some View {
-        NavigationStack {
+        NavigationStack(path: $router.navigationPath) {
             ZStack {
                 Color.white.ignoresSafeArea(.all, edges: [.top, .bottom])
                 VStack {
@@ -25,9 +26,10 @@ struct ContentView: View {
                         PercentagePanel(percentage: 90.86).padding(.bottom, 15)
                     }
                     Text("Refeições").frame(maxWidth: .infinity, alignment: .leading).font(.title3)
-                    NavigationLink(destination: AddMeal(viewModel: viewModel)) {
-                        DefaultButton(buttonText: "Nova refeição", iconSystemName: "plus", asLink: true) {}
-                    }.environment(\.colorScheme, .light)
+                    DefaultButton(buttonText: "Nova refeição", iconSystemName: "plus") {
+                        router.navigate(to: .addMeal)
+                    }
+                    .environment(\.colorScheme, .light)
                     ScrollView {
                         Spacer().frame(height: 10) // Top padding
                         MealList(meals: viewModel.mealGroups.reversed()).id(viewModel.refreshID)
@@ -36,10 +38,22 @@ struct ContentView: View {
                 .padding()
                 Spacer()
             }
+            .navigationDestination(for: DestinationID.self) { destinationID in
+                switch destinationID.viewType {
+                case .addMeal:
+                    AddMeal(viewModel: viewModel)
+                case .stats:
+                    Status()
+                case .success:
+                    Success()
+                case .fail:
+                    Fail()
+                }
+            }
         }
     }
 }
 
 #Preview {
-    ContentView(viewModel: MealsViewModel(context: PersistenceController.preview.container.viewContext))
+    ContentView(viewModel: MealsViewModel(context: PersistenceController.preview.container.viewContext)).environmentObject(NavigationRouter())
 }
