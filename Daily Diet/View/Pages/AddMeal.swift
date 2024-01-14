@@ -20,6 +20,10 @@ struct AddMeal: View {
         Date.formatted()
     }
 
+    private var validationPasses: Bool {
+        return !Name.isEmpty && Name.count > 3 && isOnDiet != nil
+    }
+
     func createMeal() {
         viewModel.createMeal(name: Name, isOnDiet: isOnDiet ?? false, date_eaten: combineDateAndTime(date: Date, time: Hour))
         dismiss()
@@ -73,11 +77,10 @@ struct AddMeal: View {
 
                             }.gridCellColumns(2).ignoresSafeArea(.keyboard)
                             Spacer()
-                            DefaultButton(buttonText: "Cadastrar Refeição") {
+                            DefaultButton(buttonText: "Cadastrar Refeição", disabled: !validationPasses) {
                                 createMeal()
                             }
                         }.padding().padding(.horizontal)
-
                     }.padding(.top, 30)
                     Spacer()
                 }
